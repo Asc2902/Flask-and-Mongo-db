@@ -1,0 +1,61 @@
+
+------------------------------
+## Flask & MongoDB User Auth Logging App
+A lightweight Flask web application that accepts user credentials via a form, securely saves them into a MongoDB database, and provides a protected workflow using the POST-Redirect-GET pattern.
+## 🚀 Features
+
+* User Login Form: Collects names and passwords via a dynamic interface.
+* Database Logging: Real-time data storage in MongoDB.
+* Smart Redirects: Fixes form resubmission bugs by redirecting to a clean /success-page.
+* Data Viewer: A JSON API endpoint (/view) to inspect all records currently inside the database collection.
+
+------------------------------
+## 🛠️ Prerequisites
+Before running this application, make sure you have installed:
+
+* Python 3.8+
+* MongoDB (Atlas cloud cluster or a local instance)
+
+------------------------------
+## 📥 Getting Started## 1. Clone or set up your directory
+Create a project folder and drop your app.py script inside it along with your web layout:
+
+your-project-folder/
+├── templates/
+│   └── index.html
+├── .env
+├── app.py
+└── README.md
+
+## 2. Install dependencies
+Run the following command in your terminal to install the required packages:
+
+pip install flask pymongo python-dotenv
+
+## 3. Configure Environment Variables
+Create a file named .env in the root directory of your project. Add your MongoDB connection string to it:
+
+URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/myDatabase?retryWrites=true&w=majority
+
+⚠️ Make sure to replace <username>, <password>, and the cluster URL with your actual MongoDB credentials.
+
+------------------------------
+## 💻 Running the App
+Start the Flask development server by executing:
+
+python app.py
+
+The application will spin up in debug mode and become accessible at http://127.0.0.1:5000.
+------------------------------
+## 🔌 API Endpoints Reference
+
+| Endpoint | Method | Description |
+|---|---|---|
+| /login | GET | Renders the login page template (index.html). |
+| /login | POST | Validates parameters, saves them to MongoDB, and redirects. |
+| /success-page | GET | Displays a JSON confirmation of a successful submission. |
+| /view | GET | Fetches and returns all database entries safely serialized as JSON. |
+
+------------------------------
+
+

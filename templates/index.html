@@ -1,0 +1,32 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN_UP </title>
+</head>
+<body>
+    <p><div>Hi Welcome to the Registration page</div></p>
+    <p>Date/Time is {{now}} </p>
+    <form action="/login" method="POST">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="name" name="name" >
+  </div>
+  
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+  </div>
+  
+  <button type="submit">Log In</button>
+  {% if error %}
+        <div style="color: rgb(10, 10, 10); margin-bottom: 15px;">
+            <strong>Error:</strong> {{ error }}
+        </div>
+    {% endif %}
+</form>
+
+</body>
+</html>

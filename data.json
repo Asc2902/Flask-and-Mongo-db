@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Leanne Graham",
+        "email": "leanne@example.com",
+        "role": "Admin",
+        "isActive": true,
+        "tags": ["management", "billing"]
+    },
+    {
+        "id": 2,
+        "name": "Ervin Howell",
+        "email": "ervin@example.com",
+        "role": "Editor",
+        "isActive": false,
+        "tags": ["content", "design"]
+    },
+    {
+        "id": 3,
+        "name": "Clementine Bauch",
+        "email": "clem@example.com",
+        "role": "User",
+        "isActive": true,
+        "tags": ["support"]
+    }
+]
